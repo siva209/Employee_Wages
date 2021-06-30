@@ -25,4 +25,17 @@ for (let day = 0; day < NUM_OF_WORKING_DAYS; day++) {
     empHrs += getWorkingHours(empCheck);
 }
 let empWage = empHrs * WAGE_PER_HOUR;
-console.log("Total Hours : " + empHrs + " Employee Wage : " + empWage);
+console.log("Total Working Hours : " + empHrs + " Total Employee Wage : " + empWage);
+
+//UC5
+const MAX_HRS_IN_MONTH = 160;
+let totalEmpHrs = 0;
+let totalWorkingDays = 0;
+while (totalEmpHrs <= MAX_HRS_IN_MONTH &&
+    totalWorkingDays < NUM_OF_WORKING_DAYS) {
+    totalWorkingDays++;
+    let empCheck = Math.floor(Math.random() * 10) % 3;
+    totalEmpHrs += getWorkingHours(empCheck);
+}
+let totalEmpWage = totalEmpHrs * WAGE_PER_HOUR;
+console.log("UC5-Total Days : " + totalWorkingDays + " Total Hrs: " + totalEmpHrs + " Emp Wage : " + totalEmpWage);
