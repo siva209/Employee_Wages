@@ -47,7 +47,7 @@ console.log(empDailyWageArr);
 function calcDailyWage(empHrs) {
     return empHrs * WAGE_PER_HOUR;
 }
-//UC7A - Calc total Wage using Array forEach traversal or reduce method
+//UC 7A - Calc total Wage using Array forEach traversal or reduce method
 let totEmpWage = 0;
 function sum(dailyWage) {
     totEmpWage += dailyWage;
@@ -59,3 +59,12 @@ function totalWages(totalWage, dailyWage) {
     return totalWage + dailyWage;
 }
 console.log('UC7A - Emp Wage with reduce : ' + empDailyWageArr.reduce(totalWages, 0));
+//UC 7B - Show Day and the Daily wage
+let dailyCntr = 0;
+function mapDayWithWage(dailyWage){
+    dailyCntr++;
+    return dailyCntr + ' = ' + dailyWage;
+}
+let mapWithWageArr = empDailyWageArr.map(mapDayWithWage);
+console.log('UC - 7B Daily Wage Map');
+console.log(mapWithWageArr);
