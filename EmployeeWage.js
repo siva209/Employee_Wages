@@ -171,4 +171,30 @@ let fullWorkingDaysArr = empDailyHrsAndWageArr.filter(dailyHrsAndWage => dailyHr
     .map(dailyHrsAndWage => dailyHrsAndWage.toString());
 console.log("UC11D Part working days: " + fullWorkingDaysArr);
 
+//UC11 - Employee Payroll Class
+class EmployeePayrollData {
+    id;
+    salary;
+
+    constructor(id, name, salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    get name() { return this._name; }
+    set name(name) { this._name = name; }
+
+    toString() {
+        return "id = " + this.id + ", name = " + this.name + ", salary = " + this.salary;
+    }
+}
+
+let employee = new EmployeePayrollData(1, "James", 30000);
+console.log(employee.toString());
+employee.name = "Mark";
+console.log(employee.toString());
+
+
+
 
